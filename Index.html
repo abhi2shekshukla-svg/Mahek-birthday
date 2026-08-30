@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Mahek ❤️</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+
+body{
+background:linear-gradient(-45deg,#ff4d6d,#ff758f,#9b5de5,#6a4c93);
+background-size:400% 400%;
+animation:bg 12s ease infinite;
+color:white;
+overflow-x:hidden;
+}
+
+@keyframes bg{
+0%{background-position:0% 50%}
+50%{background-position:100% 50%}
+100%{background-position:0% 50%}
+}
+
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+}
+
+.hero h1{
+font-size:4rem;
+text-shadow:0 0 25px white;
+animation:pulse 2s infinite;
+}
+
+@keyframes pulse{
+50%{transform:scale(1.05)}
+}
+
+.hero p{
+max-width:700px;
+font-size:1.3rem;
+margin:20px 0;
+}
+
+button{
+padding:15px 30px;
+border:none;
+border-radius:50px;
+background:white;
+color:#ff4d6d;
+font-size:18px;
+font-weight:bold;
+cursor:pointer;
+margin:10px;
+}
+
+.section{
+padding:60px 20px;
+text-align:center;
+}
+
+.gallery{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:20px;
+margin-top:30px;
+}
+
+.gallery img{
+width:320px;
+border-radius:20px;
+box-shadow:0 0 30px rgba(255,255,255,.5);
+transition:.5s;
+}
+
+.gallery img:hover{
+transform:scale(1.08);
+}
+
+.card{
+max-width:850px;
+margin:auto;
+background:rgba(255,255,255,.15);
+backdrop-filter:blur(12px);
+padding:30px;
+border-radius:20px;
+line-height:1.8;
+}
+
+footer{
+padding:30px;
+text-align:center;
+font-size:18px;
+}
+
+.heart{
+position:fixed;
+top:-10px;
+font-size:25px;
+pointer-events:none;
+animation:fall linear forwards;
+}
+
+@keyframes fall{
+to{
+transform:translateY(110vh);
+}
+}
+
+.count{
+font-size:22px;
+margin-top:15px;
+font-weight:bold;
+}
+
+#surprise{
+display:none;
+margin-top:25px;
+font-size:22px;
+animation:fade 2s;
+}
+
+@keyframes fade{
+from{opacity:0}
+to{opacity:1}
+}
+</style>
+</head>
+
+<body>
+
+<audio id="music" loop>
+<source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<section class="hero">
+
+<h1>🎂 Happy Birthday Mahek ❤️</h1>
+
+<p>
+Distance may separate us,
+but nothing can separate you from my heart.
+Today is all about celebrating you.
+</p>
+
+<div class="count">
+31 August • Your Special Day ❤️
+</div>
+
+<button onclick="playMusic()">
+🎵 Play Music
+</button>
+
+<button onclick="showSurprise()">
+🎁 Surprise
+</button>
+
+<div id="surprise">
+You are one of the most beautiful blessings in my life ❤️
+</div>
+
+</section>
+
+<section class="section">
+
+<h2>📸 Beautiful Memories</h2>
+
+<div class="gallery">
+<img src="mahek1.jpg">
+<img src="mahek2.jpg">
+</div>
+
+</section>
+
+<section class="section">
+
+<div class="card">
+
+<h2>💌 A Message For You</h2>
+
+<p>
+Dear Mahek,
+
+Today isn't just your birthday.
+
+It's a celebration of the wonderful person you are.
+
+Your smile brightens days.
+Your kindness inspires.
+And your presence makes life more beautiful.
+
+Even though miles separate us,
+my wishes, care and affection are always with you.
+
+May this birthday bring happiness,
+success, health and everything your heart desires.
+
+Keep smiling.
+Keep shining.
+
+Happy Birthday Mahek ❤️
+
+— Abhishek
+</p>
+
+</div>
+
+</section>
+
+<footer>
+Made With ❤️ By Abhishek
+</footer>
+
+<script>
+
+function playMusic(){
+document.getElementById('music').play();
+}
+
+function showSurprise(){
+document.getElementById('surprise').style.display='block';
+}
+
+function createHeart(){
+const h=document.createElement('div');
+
+h.className='heart';
+h.innerHTML=Math.random()>0.5?'❤️':'✨';
+
+h.style.left=Math.random()*100+'vw';
+h.style.animationDuration=(Math.random()*4+3)+'s';
+
+document.body.appendChild(h);
+
+setTimeout(()=>{
+h.remove();
+},7000);
+}
+
+setInterval(createHeart,250);
+
+window.onload=function(){
+
+for(let i=0;i<40;i++){
+
+let f=document.createElement("div");
+
+f.innerHTML="🎆";
+
+f.style.position="fixed";
+f.style.left=Math.random()*100+"vw";
+f.style.top=Math.random()*50+"vh";
+f.style.fontSize="35px";
+
+document.body.appendChild(f);
+
+setTimeout(()=>{
+f.remove();
+},3000);
+
+}
+}
+</script>
+
+</body>
+</html>
